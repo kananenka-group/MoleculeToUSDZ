@@ -1,0 +1,12 @@
+# scripts/convert_molecule_to_usdz
+#!/usr/bin/env python3
+import sys
+from molecule_to_usdz.convert import convert
+
+if len(sys.argv) < 2:
+    print("Usage: convert_molecule_to_usdz input.pdb|input.xyz")
+    sys.exit(1)
+
+input_file = sys.argv[1]
+convert(input_file)
+
